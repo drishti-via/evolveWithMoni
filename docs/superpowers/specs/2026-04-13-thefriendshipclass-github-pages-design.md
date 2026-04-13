@@ -222,6 +222,58 @@ No external JS libraries. No jQuery.
 
 ---
 
+## Build Script (`build.py`)
+
+Zero-dependency Python 3 script at the repo root. Fetches page content from the WordPress REST API and regenerates the main content area of each HTML file.
+
+### Usage
+
+```bash
+python3 build.py                   # sync all mapped pages
+python3 build.py --list-slugs      # print all slugs from the API (dry run, no writes)
+python3 build.py --page about      # sync one page by slug
+```
+
+### How it works
+
+1. Fetches `https://thefriendshipclass.com/wp-json/wp/v2/pages?per_page=100`
+2. Matches each page slug to a local HTML file via `SLUG_MAP`
+3. Strips Elementor scaffolding from `content.rendered` (`data-elementor-*` attrs, `elementor-*` class tokens)
+4. Rewrites internal `thefriendshipclass.com/*` links to local `.html` paths via `LINK_MAP`
+5. Replaces the block between `</nav>` and `<footer class="site-footer">` in each file
+6. Reports `✓` (updated), `–` (unmapped slug), `✗` (missing file), `⚠` (anchor not found)
+
+### Slug map (confirmed against live site)
+
+| WordPress slug | Local file |
+|---|---|
+| `home` | `index.html` |
+| `about` | `about.html` |
+| `winning-in-friendship-class` | `friendship-class.html` |
+| `true-accountability-program-community` | `accountability.html` |
+| `events` | `events.html` |
+| `networking` | `networking.html` |
+| `packages` | `packages.html` |
+| `testimonials` | `testimonials.html` |
+| `frequently-asked-questions` | `faq.html` |
+| `contact` | `contact.html` |
+| `privacy-policy` | `privacy-policy.html` |
+
+### Adding a new page
+
+1. Add the new WP slug → HTML filename to `SLUG_MAP` in `build.py`
+2. Add the WP URL → local filename to `LINK_MAP` if it links internally
+3. Create the HTML file with the standard nav + `<footer class="site-footer">` structure
+4. Run `python3 build.py --page <slug>`
+
+### Limitations
+
+- Elementor CSS is not included — some layout differences from the live site are expected; fix with minimal overrides in `css/style.css`
+- Images load cross-origin from `thefriendshipclass.com`; to host locally, download them and update `src` attributes
+- WooCommerce/PHP-rendered pages are not synced (they are out of scope)
+
+---
+
 ## Out of Scope
 
 - WooCommerce cart/checkout/my-account pages (replaced by external payment links)
