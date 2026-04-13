@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Evolve With Moni</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<nav class="site-nav" id="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">✦ Evolve With Moni</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Classes ▾</button>
+        <ul class="dropdown">
+          <li><a href="friendship-class.html">Winning In Friendship</a></li>
+          <li><a href="accountability.html">True Accountability Program</a></li>
+        </ul>
+      </li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="networking.html">Networking</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-hero" aria-label="Page introduction">
+  <span class="section-label">Get in Touch</span>
+  <h1>Contact Moni</h1>
+  <p>Have a question about a class, event, or program? Reach out — Moni would love to hear from you.</p>
+</header>
+
+<section class="section" aria-labelledby="contact-form-heading">
+  <div class="two-col" style="align-items:start;gap:4rem">
+    <div class="fade-in">
+      <h2 id="contact-form-heading">Send a Message</h2>
+      <form action="REPLACE_WITH_FORMSPREE_ENDPOINT" method="POST" style="margin-top:1.5rem" novalidate>
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Jane Smith" required autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="jane@example.com" required autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell Moni what's on your mind…" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold">Send Message</button>
+      </form>
+    </div>
+    <div class="fade-in fade-in-delay-1">
+      <h3>Other Ways to Connect</h3>
+      <div style="display:flex;flex-direction:column;gap:1.5rem;margin-top:1.5rem">
+        <div>
+          <span class="section-label">Email</span>
+          <a href="mailto:evolve.with.moni@gmail.com" style="color:var(--text)">evolve.with.moni@gmail.com</a>
+        </div>
+        <div>
+          <span class="section-label">Instagram</span>
+          <a href="https://instagram.com/winning.in.friendship" target="_blank" rel="noopener" style="color:var(--text)">@winning.in.friendship</a>
+        </div>
+        <div>
+          <span class="section-label">Threads</span>
+          <a href="https://threads.net/@winning.in.friendship" target="_blank" rel="noopener" style="color:var(--text)">@winning.in.friendship</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">✦ Evolve With Moni</a>
+      <p>Your Space for Social Growth and Self-development.</p>
+    </div>
+    <nav class="footer-links">
+      <a href="about.html">About</a>
+      <a href="friendship-class.html">Friendship Class</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </nav>
+    <div class="footer-social">
+      <a href="https://instagram.com/winning.in.friendship" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://threads.net/@winning.in.friendship" target="_blank" rel="noopener">Threads</a>
+      <a href="mailto:evolve.with.moni@gmail.com">evolve.with.moni@gmail.com</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 Evolve With Moni. All rights reserved.</p>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
