@@ -10,7 +10,7 @@ if (navToggle && navLinks) {
 
 // Close nav on link click (mobile)
 document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => navLinks.classList.remove('open'));
+  link.addEventListener('click', () => navLinks?.classList.remove('open'));
 });
 
 // Mobile dropdown toggle
@@ -35,11 +35,12 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 document.querySelectorAll('.accordion-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     const body = btn.nextElementSibling;
+    if (!body) return;
     const isOpen = btn.classList.contains('open');
     // Close all
     document.querySelectorAll('.accordion-btn').forEach(b => {
       b.classList.remove('open');
-      b.nextElementSibling.classList.remove('open');
+      b.nextElementSibling?.classList.remove('open');
     });
     // Open clicked (unless it was already open)
     if (!isOpen) {
