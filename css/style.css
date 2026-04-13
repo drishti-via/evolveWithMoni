@@ -81,14 +81,14 @@ p:last-child { margin-bottom: 0; }
   border-radius: 4px;
   border: 2px solid transparent;
   cursor: pointer;
-  transition: filter 0.2s, background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 .btn-gold {
   background: var(--gold);
   color: #1d1d22;
   border-color: var(--gold);
 }
-.btn-gold:hover { filter: brightness(1.1); color: #1d1d22; }
+.btn-gold:hover { background: var(--gold-light); border-color: var(--gold-light); color: #1d1d22; }
 .btn-outline {
   background: transparent;
   color: var(--gold);
