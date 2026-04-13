@@ -430,6 +430,19 @@ p:last-child { margin-bottom: 0; }
   .hero-inner { padding: 3rem 1.5rem; }
 }
 
+/* ─── NAV OVERFLOW FIX (10 items) ───────────────── */
+/* Prevent the horizontal hfe-nav-menu from wrapping to a second line */
+.hfe-nav-menu__layout-horizontal .hfe-nav-menu {
+  -webkit-flex-wrap: nowrap !important;
+  -ms-flex-wrap: nowrap !important;
+  flex-wrap: nowrap !important;
+}
+/* Tighten horizontal padding on nav links so all 10 items fit */
+.hfe-nav-menu__layout-horizontal .hfe-nav-menu > li > a.hfe-menu-item {
+  padding-left: 13px !important;
+  padding-right: 13px !important;
+}
+
 /* ─── SCREEN READER ONLY ─────────────────────────── */
 .sr-only {
   position: absolute;
