@@ -11,3 +11,14 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: cholot-child
 Tags: one-column, two-columns, right-sidebar,custom-colors,featured-images
 */
+
+/* ─── NAV OVERFLOW FIX (10 items) ─────────────────────── */
+/* Prevent the nav from wrapping to a second line */
+.hfe-nav-menu__layout-horizontal .hfe-nav-menu {
+  flex-wrap: nowrap;
+}
+/* Reduce per-item padding so all 10 items fit on one line */
+.elementor-1163 .elementor-element.elementor-element-daef547 .menu-item a.hfe-menu-item {
+  padding-left: 12px;
+  padding-right: 12px;
+}
