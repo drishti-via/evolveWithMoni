@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Evolve With Moni — Social Growth & Self-development in Seattle</title>
+  <title>Evolve With Moni — Social Growth &amp; Self-development in Seattle</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -18,10 +18,10 @@
     <a href="index.html" class="nav-logo">✦ Evolve With Moni</a>
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">&#9776;</button>
     <ul class="nav-links" id="nav-links">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html" aria-current="page">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li class="has-dropdown">
-        <a href="#">Classes ▾</a>
+        <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Classes ▾</button>
         <ul class="dropdown">
           <li><a href="friendship-class.html">Winning In Friendship</a></li>
           <li><a href="accountability.html">True Accountability Program</a></li>
@@ -54,22 +54,22 @@
 </section>
 
 <!-- ABOUT TEASER -->
-<div class="section-alt">
+<section class="section-alt" aria-labelledby="about-teaser-heading">
 <div class="section">
   <div class="two-col">
-    <img src="images/moni-about.jpg" alt="Moni" class="fade-in" width="500" height="600">
+    <img src="images/moni-about.jpg" alt="Portrait of Moni, founder of Evolve With Moni" class="fade-in" width="500" height="600">
     <div class="fade-in fade-in-delay-1">
       <span class="section-label">About Moni</span>
-      <h2>A Lover of People &amp; Authentic Connection</h2>
+      <h2 id="about-teaser-heading">A Lover of People &amp; Authentic Connection</h2>
       <p>Moni is a fun-loving &amp; thought-provoking public speaker and women's development facilitator based in Seattle. She finds joy in connecting people to resources &amp; communities that enrich and bring deeper fulfillment to their lives.</p>
       <a href="about.html" class="btn btn-outline" style="margin-top:1rem">Meet Moni →</a>
     </div>
   </div>
-</div>
-</div>
+  </div>
+</section>
 
 <!-- OFFERINGS -->
-<div class="section">
+<section class="section">
   <div class="text-center fade-in">
     <span class="section-label">What We Offer</span>
     <h2>Build Friendships &amp; Community That Last</h2>
@@ -91,10 +91,10 @@
       <a href="events.html" class="btn btn-outline">View Events →</a>
     </div>
   </div>
-</div>
+</section>
 
 <!-- TESTIMONIALS -->
-<div class="section-alt">
+<section class="section-alt">
 <div class="section">
   <div class="text-center fade-in">
     <span class="section-label">What People Say</span>
@@ -117,8 +117,8 @@
   <div class="text-center" style="margin-top:2rem">
     <a href="testimonials.html" class="btn btn-outline">Read All Testimonials →</a>
   </div>
-</div>
-</div>
+  </div>
+</section>
 
 <!-- UPCOMING EVENTS -->
 <div class="section">
@@ -144,7 +144,8 @@
     <p>Get updates on upcoming events, classes, and community resources delivered to your inbox.</p>
     <!-- PLACEHOLDER: Replace with Mailchimp embed or Formspree newsletter endpoint -->
     <form action="https://formspree.io/f/REPLACE_ME" method="POST" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;max-width:480px;margin:0 auto">
-      <input type="email" name="email" placeholder="Your email address" required
+      <label for="newsletter-email" class="sr-only">Your email address</label>
+      <input type="email" id="newsletter-email" name="email" placeholder="Your email address" required
         style="flex:1;min-width:220px;background:var(--bg-alt);border:1px solid rgba(212,175,55,0.4);border-radius:4px;padding:0.7rem 1rem;color:var(--text);font-family:var(--font-body)">
       <button type="submit" class="btn btn-gold">Subscribe</button>
     </form>

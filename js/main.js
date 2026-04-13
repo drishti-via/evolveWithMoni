@@ -14,11 +14,12 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 });
 
 // Mobile dropdown toggle
-document.querySelectorAll('.has-dropdown > a').forEach(toggle => {
-  toggle.addEventListener('click', e => {
+document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+  toggle.addEventListener('click', () => {
     if (window.innerWidth <= 768) {
-      e.preventDefault();
       toggle.closest('.has-dropdown').classList.toggle('open');
+      const isOpen = toggle.closest('.has-dropdown').classList.contains('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     }
   });
 });

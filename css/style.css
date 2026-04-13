@@ -167,6 +167,19 @@ p:last-child { margin-bottom: 0; }
   font-size: 1.5rem;
   cursor: pointer;
 }
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+.dropdown-toggle:hover,
+.dropdown-toggle:focus-visible { color: var(--gold); outline: none; }
 .nav-toggle:focus-visible,
 .accordion-btn:focus-visible {
   outline: 2px solid var(--gold);
@@ -397,4 +410,17 @@ p:last-child { margin-bottom: 0; }
   .two-col { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; }
   .hero-inner { padding: 3rem 1.5rem; }
+}
+
+/* ─── SCREEN READER ONLY ─────────────────────────── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
