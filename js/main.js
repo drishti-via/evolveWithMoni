@@ -42,11 +42,13 @@ document.querySelectorAll('.accordion-btn').forEach(btn => {
     document.querySelectorAll('.accordion-btn').forEach(b => {
       b.classList.remove('open');
       b.nextElementSibling?.classList.remove('open');
+      b.setAttribute('aria-expanded', 'false');
     });
     // Open clicked (unless it was already open)
     if (!isOpen) {
       btn.classList.add('open');
       body.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
     }
   });
 });
