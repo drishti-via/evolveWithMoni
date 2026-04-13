@@ -36,9 +36,14 @@
 		.blog-hero h1 { color: #fff; font-size: 2.1em; margin-bottom: 10px; }
 		.blog-hero p { color: #ccc; max-width: 520px; margin: 0 auto; }
 		.blog-grid { display: flex; flex-wrap: wrap; gap: 28px; justify-content: center; padding: 48px 24px; max-width: 1100px; margin: 0 auto; }
-		.blog-card { background: #1e1e1e; border: 1px solid #333; padding: 28px; max-width: 480px; flex: 1 1 340px; }
+		.blog-card { background: #1e1e1e; border: 1px solid #333; padding: 0; overflow: hidden; max-width: 480px; flex: 1 1 340px; }
+		.blog-card-banner { position: relative; height: 140px; overflow: hidden; }
+		.blog-card-banner img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; display: block; }
+		.blog-card-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 30%, #1e1e1e 100%); }
+		.blog-card-banner .tag { position: absolute; bottom: 10px; left: 14px; margin: 0; }
+		.blog-card-body { padding: 16px 18px 20px; }
 		.blog-card .tag { display: inline-block; background: #B68C2F; color: #fff; font-size: 0.75em; padding: 3px 10px; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 12px; }
-		.blog-card h2 { color: #fff; font-size: 1.2em; margin-bottom: 10px; line-height: 1.4; }
+		.blog-card h2 { color: #fff; font-size: 1.15em; margin-bottom: 10px; line-height: 1.4; }
 		.blog-card h2 a { color: #fff; text-decoration: none; }
 		.blog-card h2 a:hover { color: #B68C2F; }
 		.blog-card p { color: #bbb; font-size: 0.95em; line-height: 1.6; margin-bottom: 18px; }
@@ -111,28 +116,52 @@
 
 	<div class="blog-grid">
 		<div class="blog-card">
-			<span class="tag">Friendship</span>
-			<h2><a href="blog/complete-guide-making-friends-as-an-adult-woman.html">The Complete Guide to Making Friends as an Adult Woman</a></h2>
-			<p>A practical, honest guide to why adult women struggle with friendship, what actually makes friendships work, and the specific steps you can take to build a rich, reciprocal friend circle.</p>
-			<a href="blog/complete-guide-making-friends-as-an-adult-woman.html" class="read-more">Read the guide &rarr;</a>
+			<div class="blog-card-banner">
+				<img src="images/wp-content-uploads-2025-03-MIA03056-1024x682.webp" alt="">
+				<div class="blog-card-overlay"></div>
+				<span class="tag">Friendship</span>
+			</div>
+			<div class="blog-card-body">
+				<h2><a href="blog/complete-guide-making-friends-as-an-adult-woman.html">The Complete Guide to Making Friends as an Adult Woman</a></h2>
+				<p>A practical, honest guide to why adult women struggle with friendship, what actually makes friendships work, and the specific steps you can take to build a rich, reciprocal friend circle.</p>
+				<a href="blog/complete-guide-making-friends-as-an-adult-woman.html" class="read-more">Read the guide &rarr;</a>
+			</div>
 		</div>
 		<div class="blog-card">
-			<span class="tag">Friendship</span>
-			<h2><a href="blog/seattle-freeze-how-to-make-friends-in-seattle.html">The Seattle Freeze: Why It's So Hard to Make Friends in Seattle (And What Actually Works)</a></h2>
-			<p>If you've moved to Seattle expecting friendly people and found surface-level politeness instead, you've met the Seattle Freeze. Here's what it is and 4 strategies that actually work.</p>
-			<a href="blog/seattle-freeze-how-to-make-friends-in-seattle.html" class="read-more">Read the article &rarr;</a>
+			<div class="blog-card-banner">
+				<img src="images/wp-content-uploads-2025-03-MIA03202-Enhanced-NR-1-1024x682.webp" alt="">
+				<div class="blog-card-overlay"></div>
+				<span class="tag">Friendship</span>
+			</div>
+			<div class="blog-card-body">
+				<h2><a href="blog/seattle-freeze-how-to-make-friends-in-seattle.html">The Seattle Freeze: Why It's So Hard to Make Friends in Seattle (And What Actually Works)</a></h2>
+				<p>If you've moved to Seattle expecting friendly people and found surface-level politeness instead, you've met the Seattle Freeze. Here's what it is and 4 strategies that actually work.</p>
+				<a href="blog/seattle-freeze-how-to-make-friends-in-seattle.html" class="read-more">Read the article &rarr;</a>
+			</div>
 		</div>
 		<div class="blog-card">
-			<span class="tag">Friendship</span>
-			<h2><a href="blog/why-making-friends-as-an-adult-is-so-hard.html">Why Making Friends as an Adult Is So Hard (It's Not Just You)</a></h2>
-			<p>Making friends as an adult is genuinely difficult — and it's not a personal failure. Here's why the system stops supporting friendship after your 20s, and what changes when you have the right skills.</p>
-			<a href="blog/why-making-friends-as-an-adult-is-so-hard.html" class="read-more">Read the article &rarr;</a>
+			<div class="blog-card-banner">
+				<img src="images/wp-content-uploads-2025-03-MIA03609-Enhanced-NR-1024x682.webp" alt="">
+				<div class="blog-card-overlay"></div>
+				<span class="tag">Friendship</span>
+			</div>
+			<div class="blog-card-body">
+				<h2><a href="blog/why-making-friends-as-an-adult-is-so-hard.html">Why Making Friends as an Adult Is So Hard (It's Not Just You)</a></h2>
+				<p>Making friends as an adult is genuinely difficult — and it's not a personal failure. Here's why the system stops supporting friendship after your 20s, and what changes when you have the right skills.</p>
+				<a href="blog/why-making-friends-as-an-adult-is-so-hard.html" class="read-more">Read the article &rarr;</a>
+			</div>
 		</div>
 		<div class="blog-card">
-			<span class="tag">Accountability</span>
-			<h2><a href="blog/why-women-need-an-accountability-community.html">Why Women Need an Accountability Community (Not Just a Partner)</a></h2>
-			<p>Accountability partners are great in theory and fragile in practice. A community changes everything &mdash; here's why structure, peer modeling, and shared stakes make the difference.</p>
-			<a href="blog/why-women-need-an-accountability-community.html" class="read-more">Read the article &rarr;</a>
+			<div class="blog-card-banner">
+				<img src="images/wp-content-uploads-2025-03-IMG_2612-1024x683.webp" alt="">
+				<div class="blog-card-overlay"></div>
+				<span class="tag">Accountability</span>
+			</div>
+			<div class="blog-card-body">
+				<h2><a href="blog/why-women-need-an-accountability-community.html">Why Women Need an Accountability Community (Not Just a Partner)</a></h2>
+				<p>Accountability partners are great in theory and fragile in practice. A community changes everything &mdash; here's why structure, peer modeling, and shared stakes make the difference.</p>
+				<a href="blog/why-women-need-an-accountability-community.html" class="read-more">Read the article &rarr;</a>
+			</div>
 		</div>
 	</div>
 </main>
