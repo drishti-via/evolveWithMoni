@@ -68,6 +68,9 @@ p:last-child { margin-bottom: 0; }
 .section--narrow {
   max-width: 760px;
 }
+.section--narrow h2 {
+  margin-top: 2rem;
+}
 .section-alt {
   background: var(--bg-alt);
 }
